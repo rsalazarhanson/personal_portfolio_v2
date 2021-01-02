@@ -1,0 +1,12 @@
+<h1>This is the Portfolio website home</h1>
+
+{% for project in projects %}
+
+    <h1>{{ project.title }}</h1>
+    <h2>{{ project.description }}</h2>
+        {% if project.url %}
+            <a href="{{ project.url }}">Link</p>
+        {% endif %}
+    <img src="{{ project.image.url }}" alt="">
+
+{% endfor %}
